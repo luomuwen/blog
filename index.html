@@ -59,7 +59,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post'
+    sidebar: 'hide'
   };
 </script>
 
@@ -168,16 +168,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
 
       
       
@@ -256,23 +246,15 @@
         
           <span itemprop="articleBody">
             
-              <p>今天过年的时候在网上流行了一个<a href="http://www.guokr.com/article/441146/" target="_blank" rel="external">视频</a>，就是一个自动抢红包的机器人。这个突然一下子就激起了我的兴趣。自己也想尝试做一些硬件方面的东西。</p>
-<p>在网上搜了一下，发现现在的那些智能硬件，多多少少都与两个东西有关，“Arduino”和“树莓派”。<br>Arduino我的理解就是一个集成化的单片机。树莓派则更像一个非常低配的“电脑”。</p>
-<p>找了一些案例，发现了很多有意思的小项目，网友们用它做了各种个样的事情。</p>
-<p>印象深刻的例子有几个，一个是花了大概一年的时间，做了一个<a href="http://www.wangxiaokang.cn/?p=99" target="_blank" rel="external">钢铁侠的头盔</a>，能够自动开合，眼部有led灯，还带有彩蛋，能够开启眨眼模式。</p>
-<p>还有一个是做了一个<a href="http://www.geekview.cn/view/2015/0604/自己动手，将一面镜子改造成超科.html" target="_blank" rel="external">Magic Mirror</a> 。能够在镜子上显示一些信息，例如天气，日期，时间什么的。也是非常的酷炫。不得不说这个“魔镜”项目非常的具有扩展性。</p>
-<p>由于之前没有做过这个方面的项目，所以我挑选了一个难度系数比较小，但是比较实用的项目开始练练手。就是通过语音去控制灯的开关。这个例子已经有前辈做过了，这里先模仿一下。这里是他做的<a href="http://www.cnblogs.com/dehai/p/4285749.html#" target="_blank" rel="external">例子</a>。可以看到他不仅可以通过语音控制灯的开关，还可以控制空调与门等。</p>
-<p>###实现部分</p>
-<p>####模块分析</p>
-<ol>
-<li>语音接受模块</li>
-<li>语音解析模块 </li>
-<li>灯泡控制模块</li>
-<li>语音输出模块</li>
-</ol>
-
-            
+            今天过年的时候在网上流行了一个视频，就是一个自动抢红包的机器人。这个突然一下子就激起了我的兴趣。自己也想尝试做一些硬件方面的东西。
+在网上搜了一下，发现现在的那些智能硬件，多多少少都与两个东西有关，“Arduino”和“树莓派”。Arduino我的理解就是一个集成化的单片机。树莓派则更像一个非常低配
+            ...
           </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/02/17/语音控制的电灯/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -352,9 +334,14 @@
         
           <span itemprop="articleBody">
             
-              
+            
             
           </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/09/iPhone中的适配问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -434,9 +421,14 @@
         
           <span itemprop="articleBody">
             
-              
+            
             
           </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/07/UIScrollView与Autolayout/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -516,9 +508,14 @@
         
           <span itemprop="articleBody">
             
-              
+            
             
           </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/11/13/iOS通知/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -764,9 +761,14 @@
         
           <span itemprop="articleBody">
             
-              
+            
             
           </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/10/14/viewDidLoad-viewWillAppear-viewDidAppear的区别？/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -846,22 +848,15 @@
         
           <span itemprop="articleBody">
             
-              <blockquote>
-<p>In computer science, in particular networking, a session is a semi-permanent interactive information interchange, also known as a dialogue, a conversation or a meeting, between two or more communicating devices, or between a computer and user .</p>
-</blockquote>
-<p>以上是来自<a href="https://en.wikipedia.org/wiki/Session_(computer_science)" target="_blank" rel="external">wiki</a>的一段解释。</p>
-<p>简单的说，session就是一种半持久性的网络协议，在用户端和服务器端，或者两个或两个以上的设备之间，进行数据交换的一种机制。</p>
-<p>我们常常所说的session，指的是HTTP Session。</p>
-<p>本文也主要着重对HTTP session进行说明。</p>
-<p>HTTP session 在 <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#HTTP_session" target="_blank" rel="external">wiki</a>的说明。</p>
-<blockquote>
-<p>An HTTP session is a sequence of network request-response transactions.</p>
-</blockquote>
-<h3 id="为什么要Session"><a href="#为什么要Session" class="headerlink" title="为什么要Session"></a>为什么要Session</h3><p>HTTP协议本身的无状态性。什么叫做无状态，这是一个很关键的概念，在这里简单的说，服务器在处理请求的时候，并不知道这个请求是谁发来的（实际上可以通过IP地址知道，但是这有缺陷）。</p>
-<p>这种机制，对于以提供内容为核心的Web1.0，例如门户网站，非常适合。然而对于以应用服务为核心的Web 2.0而言，服务器端必须有能力从请求中提取出请求者的身份信息，以在请求者不用反复输入身份的情况下，提供连续的服务。</p>
-<h3 id="Session的实现"><a href="#Session的实现" class="headerlink" title="Session的实现"></a>Session的实现</h3>
             
+In computer science, in particular networking, a session is a semi-permanent interactive information interchange, also known as a dialogue, a convers
+            ...
           </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/09/30/session是什么/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -931,10 +926,10 @@
           </div>
 
           <div class="site-state-item site-state-tags">
-            <a href="/tags">
+            
               <span class="site-state-item-count">0</span>
               <span class="site-state-item-name">标签</span>
-              </a>
+              
           </div>
 
         </nav>
