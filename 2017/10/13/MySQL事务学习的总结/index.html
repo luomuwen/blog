@@ -45,16 +45,34 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
-<meta name="description" content="记录自己对于官方ViewController的学习">
+<meta name="description" content="最近对数据库进行了一次重新的学习，对其有了一些新的认识，在此做一个简单的总结。
+数据库区别于文件系统的一个很重要的的点，在于其对事务的支持。
+事务是什么？事务是对数据库数据进行操作的一个基本单位。
+事务有几个特点：ACID.
+其实数据库的很多设计与实现都要为了要达到ACID。所以了解ACID是很关键的一步。
+什么是ACID？
+A =&amp;gt; Atomicity 原子性，是指在一个事务中的一组操作，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ViewController的学习">
-<meta property="og:url" content="http://www.nbsbxxx.com/2015/10/14/ViewController的学习/index.html">
+<meta property="og:title" content="MySQL学习总结">
+<meta property="og:url" content="http://www.nbsbxxx.com/2017/10/13/MySQL事务学习的总结/index.html">
 <meta property="og:site_name" content="nbsbxxx">
-<meta property="og:description" content="记录自己对于官方ViewController的学习">
-<meta property="og:updated_time" content="2015-10-19T09:23:06.000Z">
+<meta property="og:description" content="最近对数据库进行了一次重新的学习，对其有了一些新的认识，在此做一个简单的总结。
+数据库区别于文件系统的一个很重要的的点，在于其对事务的支持。
+事务是什么？事务是对数据库数据进行操作的一个基本单位。
+事务有几个特点：ACID.
+其实数据库的很多设计与实现都要为了要达到ACID。所以了解ACID是很关键的一步。
+什么是ACID？
+A =&amp;gt; Atomicity 原子性，是指在一个事务中的一组操作，">
+<meta property="og:updated_time" content="2017-10-13T02:14:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ViewController的学习">
-<meta name="twitter:description" content="记录自己对于官方ViewController的学习">
+<meta name="twitter:title" content="MySQL学习总结">
+<meta name="twitter:description" content="最近对数据库进行了一次重新的学习，对其有了一些新的认识，在此做一个简单的总结。
+数据库区别于文件系统的一个很重要的的点，在于其对事务的支持。
+事务是什么？事务是对数据库数据进行操作的一个基本单位。
+事务有几个特点：ACID.
+其实数据库的很多设计与实现都要为了要达到ACID。所以了解ACID是很关键的一步。
+什么是ACID？
+A =&amp;gt; Atomicity 原子性，是指在一个事务中的一组操作，">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -66,7 +84,7 @@
 
 
 
-  <title> ViewController的学习 | nbsbxxx </title>
+  <title> MySQL学习总结 | nbsbxxx </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -181,7 +199,7 @@
             
             
               
-                ViewController的学习
+                MySQL学习总结
               
             
           </h1>
@@ -190,8 +208,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-10-14T22:50:45+08:00" content="2015-10-14">
-              2015-10-14
+            <time itemprop="dateCreated" datetime="2017-10-13T09:19:46+08:00" content="2017-10-13">
+              2017-10-13
             </time>
           </span>
 
@@ -201,8 +219,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/10/14/ViewController的学习/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/14/ViewController的学习/" itemprop="commentsCount"></span>
+                <a href="/2017/10/13/MySQL事务学习的总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/10/13/MySQL事务学习的总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -221,141 +239,33 @@
       
 
       
-        <span itemprop="articleBody"><p>###1. View Controller基础</p>
-<p>####1.1 Sceens, Windows以及Views 创建了可视化的接口</p>
-<p>####1.2 View Controllers管理Views</p>
-<ul>
-<li>Every view is controlled by only one view controller.</li>
-<li>Each view controller interacts with a subset of your app’s data. </li>
-<li>Because each view controller provides only a subset of the user experience, the view controllers must communicate with each other to make this experience seamless.</li>
-</ul>
-<p>####1.3 View Controller的分类</p>
-<ul>
-<li><p>Content View Controller</p>
-<pre>
-  1. 显示数据给用户
-  2. 搜集用户数据
-  3. 运行指定的任务
-  4. 为一系列的操作或者命令导航
-</pre>
-</li>
-<li><p>Table View Controller</p>
-</li>
-<li>Container View Controller</li>
-<li>Navigation Controller</li>
-<li>Tab Bar Controller</li>
-<li>Split View Controller</li>
-<li>Popover Controller<br>  此Popover Controller是目前来看唯一不继承自UIViewController的。</li>
-<li>Page View Controller<br>####1.4 View Controller内容的显示方式</li>
-<li>使View Controller成为window的root view controller</li>
-<li>使View Controller成为容器的子View Controller</li>
-<li>在Popover Controller中显示View Controller （iPad only）</li>
-<li>在其他的ViewController中展现</li>
-</ul>
-<p>####1.5 通过多个View Controller构建你的应用</p>
-<ul>
-<li><p>Parent-Child</p>
-</li>
-<li><p>Sibling </p>
-</li>
-<li><p>作为另外一个界面的短暂的显示</p>
-</li>
-<li><p>Data Flow</p>
-</li>
-</ul>
-<p>####1.6 Storyborad帮助你设计你的用户界面</p>
-<p>###2 在你的App中使用View Controllers</p>
-<p>####2.1 通过Stroyboard创建View Controller</p>
-<ul>
-<li>两个View Controller的关系<ol>
-<li>segue, 目标View Controller在Segue触发之后实例化</li>
-<li>Containment， 子View Controller在父View Controller实例化之后实例化。</li>
-<li>其他，不自动实例化，而是通过编程的方式。 </li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><p>Storyboard上的Segue，View Controller都是通过id进行指定。</p>
-</li>
-<li><p>你的项目中可以包含一个或者多个Storyboard，如果存在main storybarod，iOS会自动加载main storyborad。</p>
-</li>
-<li><p>iOS通过Storyboard加载程序的过程：</p>
+        <span itemprop="articleBody"><p>最近对数据库进行了一次重新的学习，对其有了一些新的认识，在此做一个简单的总结。</p>
+<p>数据库区别于文件系统的一个很重要的的点，在于其对事务的支持。</p>
+<p>事务是什么？事务是对数据库数据进行操作的一个基本单位。</p>
+<p>事务有几个特点：ACID.</p>
+<p>其实数据库的很多设计与实现都要为了要达到ACID。所以了解ACID是很关键的一步。</p>
+<p>什么是ACID？</p>
+<p>A =&gt; Atomicity 原子性，是指在一个事务中的一组操作，是不可分割的，要么同时成功，要么同时失败，不存在一部分成功，一部分不成功。</p>
+<p>C =&gt; Consistency. 事务使得数据库是从一个一致性状态切换到另一个一致性状态。</p>
+<p>I =&gt; Isolation 隔离性，是指一个事务对另外一个事务应该是不可见的。这里是理论上的期望，实际情况会有些不一样，后面会详细的讲。</p>
+<p>D =&gt; Duration 持久性，数据库对数据的修改是永久性的。不会受到其他的影响。</p>
+<p>隔离级别</p>
+<p>上面的隔离性其实是有一些解释的空间的，一个事事务对另外一个事务不可见，究竟什么是不可见？不可见到那种程度？这个规范已经规定好了。</p>
+<p>隔离级别规定了4种。</p>
 <ol>
-<li>创建一个window</li>
-<li>加载main storyboard创建它的初始View Controller</li>
-<li>将Window的rooteViewController设置为刚刚创建的View Controller，然后使window在屏幕上可见。</li>
+<li><p>read uncommitted</p>
+</li>
+<li><p>read committed</p>
+</li>
+<li><p>repeatable read</p>
+</li>
+<li><p>serializable</p>
+</li>
 </ol>
-</li>
-<li><p>Segue</p>
-</li>
-</ul>
-<ul>
-<li>通过编程的方式触发Segue    <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">performSegueWithIdentifier:<span class="string">@""</span> sender:</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>通过编程的方式获得Storyboard上的View Controller的实例</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIStoryboard</span>* storyboard = [<span class="built_in">UIStoryboard</span> storyboardWithName:<span class="string">@"main"</span> bundle:<span class="literal">nil</span>];</span><br><span class="line">TestViewController* viewController = [storyboard instantiateViewControllerWithIdentifier: <span class="string">@"TestViewController"</span>];</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在多个Storyboard跳转需要通过编程的方式<br>  一般来说，没有任何规定不让你创建多个storyboard，但是一般在这些情况下，你可以创建多个：</p>
-<ol>
-<li>大量的开发团队，每个团队负责不同的用户界面</li>
-<li>使用第三方的一些库，这里库里面已经内置了一堆的storyboard</li>
-<li>你的内容需要在额外的一些屏幕上显示。<br>怎么跳转呢？这里并没有讲。</li>
-</ol>
-</li>
-</ul>
-<p>####2.2 实例化一个没有Storyboard的View Controller</p>
-<p> 一般来说，三思，通过Objective－C的方式（通常而言都是 alloc init）。Storyboard所有的好处你都不能够享受，你得自己搞定一切。</p>
-<p>####2.3 通过编程的方式显示一个View Controller的内容</p>
-<ol>
-<li>设置成window的rootViewController</li>
-<li>设置成一个可视的View Controller的子Controller</li>
-<li>presentViewController: animated: completion:</li>
-<li>popover（iPad only）</li>
-</ol>
-<p>###创建自定义内容的View Controllers</p>
-<p>####3.1 View Controller 内容概览</p>
-<p>#####3.1.1 View Controller管理资源</p>
-<p>#####3.1.2 View Controller管理View</p>
-<p>#####3.1.3 View Controller响应事件</p>
-<p>#####3.1.4 View Controller与其他View Controller交互</p>
-<p>#####3.1.5 View Controller与容器的协作</p>
-<p>#####3.1.6 View Controller被其他View Controller展现</p>
-<p>####3.2 设计你自己的View Controller</p>
-<p>设计View Controller中，需要关注的一些问题：</p>
-<ul>
-<li>要不要使用Storyboard来实现？</li>
-<li>什么时候实例化？</li>
-<li><p>它需要显示什么样的数据？<br>  这里他有几种通用的模式：</p>
-<pre><code>* 从其他的Controller那里接受数据然后显示它，不提供方式编辑它。没有数据返回。
-* 当前Controller允许用户输入新数据，在数据输入完成之后，将数据传给另外的Controller。
-* 当前Controll而接收数据，允许用户编辑它。编辑完成之后，将数据发送到另外的Controller。
-* Controller不接受，也不发送任何数据。它只显示静态View。
-* Controller不接受，也不发送任务数据。它内部实现了一套不暴露给外部的数据加载机制。
-</code></pre><p>  <em>这里没有限定只能用上面的几种方式</em></p>
-</li>
-<li><p>它运行的是什么任务？</p>
-</li>
-<li>它的视图在屏幕上是如何显示的？</li>
-<li>它与其他View Controller的关系？</li>
-</ul>
-<p>####3.3 View Controller设计的例子</p>
-<ol>
-<li>任务描述</li>
-</ol>
-<p>####3.4 实现View Controller的备忘录<br>通过Storyboard创建View Controller，其中的View，button都应该放在category中。</p>
-<p>###View Controllers中的资源管理</p>
-<p>###对显示相关的响应</p>
-<p>###改变View Controller中view的大小</p>
-<p>###在响应链(Responder Chain)中使用View Controller</p>
-<p>###面对多个接口的支持</p>
-<p>###从View Controller的角度看无障碍访问（Accessibility from the View Congtroller’s Perspective）</p>
-<p>###从其他的View Controller中展现View Controller</p>
-<p>###不同View Controllers中的坐标</p>
-<p>###在View Controller中实现编辑模式</p>
-<p>###创建自定义的Segue</p>
-<p>###创建自定义的容器View Controller</p>
+<p>与他们一起出现的还有几个名词，脏读，不可重复读，幻读。</p>
+<p>如何实现事务？</p>
+<p>这里要我从0开始思考如何实现，我觉得我是想不出来的。这里别人已经实现好了。</p>
+<p>MySQL innoDB引擎是通过Redo log 跟 Undo log支持了事务的ACD特性。然后通过各种锁支持了4种隔离级别。</p>
 </span>
       
     </div>
@@ -367,17 +277,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/14/viewDidLoad-viewWillAppear-viewDidAppear的区别？/" rel="next" title="viewDidLoad,viewWillAppear,viewDidAppear的区别？">
-                <i class="fa fa-chevron-left"></i> viewDidLoad,viewWillAppear,viewDidAppear的区别？
+              <a href="/2016/02/17/语音控制的电灯/" rel="next" title="语音控制的电灯">
+                <i class="fa fa-chevron-left"></i> 语音控制的电灯
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/10/29/Core-Animation-编程指南/" rel="prev" title="Core Animation 编程指南">
-                Core Animation 编程指南 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -425,8 +331,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/10/14/ViewController的学习/"
-                   data-title="ViewController的学习" data-url="http://www.nbsbxxx.com/2015/10/14/ViewController的学习/">
+              <div class="ds-thread" data-thread-key="2017/10/13/MySQL事务学习的总结/"
+                   data-title="MySQL学习总结" data-url="http://www.nbsbxxx.com/2017/10/13/MySQL事务学习的总结/">
               </div>
             
           </div>
