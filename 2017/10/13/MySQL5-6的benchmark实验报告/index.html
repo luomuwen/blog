@@ -92,7 +92,10 @@
  MySQL: 5.6
 
 benchmark测试工具的版本
- sysbench: 0.4.12.0">
+ sysbench: 0.4.12.0
+
+
+最后的测试结果">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL5.6的benchmark实验报告">
 <meta property="og:url" content="http://blog.nbsbxxx.com/2017/10/13/MySQL5-6的benchmark实验报告/index.html">
@@ -110,8 +113,11 @@ benchmark测试工具的版本
  MySQL: 5.6
 
 benchmark测试工具的版本
- sysbench: 0.4.12.0">
-<meta property="og:updated_time" content="2017-10-16T02:26:55.000Z">
+ sysbench: 0.4.12.0
+
+
+最后的测试结果">
+<meta property="og:updated_time" content="2017-10-16T02:57:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL5.6的benchmark实验报告">
 <meta name="twitter:description" content="系统硬件配置
@@ -127,7 +133,10 @@ benchmark测试工具的版本
  MySQL: 5.6
 
 benchmark测试工具的版本
- sysbench: 0.4.12.0">
+ sysbench: 0.4.12.0
+
+
+最后的测试结果">
 
 
 
@@ -364,7 +373,33 @@ benchmark测试工具的版本
 <p> sysbench: 0.4.12.0</p>
 </li>
 </ol>
+<p>最后的测试结果</p>
+<pre>
+    OLTP test statistics:
+    queries performed:
+        read:                            391371750
+        write:                           139775625
+        other:                           55910250
+        total:                           587057625
+    transactions:                        27955125 (129.42 per sec.)
+    deadlocks:                           0      (0.00 per sec.)
+    read/write requests:                 531147375 (2459.01 per sec.)
+    other operations:                    55910250 (258.84 per sec.)
 
+General statistics:
+    total time:                          216000.2308s
+    total number of events:              27955125
+    total time taken by event execution: 2159850.8212
+    response time:
+         min:                                 23.59ms
+         avg:                                 77.26ms
+         max:                               2681.60ms
+         approx.  95 percentile:             200.03ms
+
+Threads fairness:
+    events (avg/stddev):           2795512.5000/1211.57
+    execution time (avg/stddev):   215985.0821/0.08
+</pre>
       
     </div>
     
