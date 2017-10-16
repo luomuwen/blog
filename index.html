@@ -1,11 +1,23 @@
-<!doctype html>
-<html class="theme-next use-motion theme-next-mist">
-<head>
+<!DOCTYPE html>
+
+
+
   
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
@@ -18,31 +30,53 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
+
+
+
+
+
+  
   
-    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  
-
-
-<link rel="stylesheet" type="text/css" href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" />
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
-
-
-    <meta name="description" content="我不怕千万人阻挡，只怕自己投降。" />
-
-
-
-  <meta name="keywords" content="Hexo,next" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
 
 
 <meta name="description" content="我不怕千万人阻挡，只怕自己投降。">
@@ -56,94 +90,109 @@
 <meta name="twitter:description" content="我不怕千万人阻挡，只怕自己投降。">
 
 
-<script type="text/javascript" id="hexo.configuration">
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Mist',
-    sidebar: 'hide'
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
   };
 </script>
 
 
 
-  <title> nbsbxxx </title>
+  <link rel="canonical" href="http://www.nbsbxxx.com/"/>
+
+
+
+
+
+  <title>nbsbxxx</title>
+  
+
+
+
+
+
+
+
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
+  
+  
+    
   
 
-
-
-
-
-
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">nbsbxxx</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">nbsbxxx</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-  <p class="site-subtitle"></p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
   
 
   
-    <ul id="menu" class="menu ">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -151,27 +200,48 @@
       
 
       
-      
     </ul>
   
 
   
 </nav>
 
+
+
  </div>
     </header>
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content"> 
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
     
       
 
   
+
+  
+  
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nbsbxxx.com/2017/10/13/MySQL5-6的benchmark实验报告/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不修电脑的罗师傅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nbsbxxx">
+    </span>
 
     
       <header class="post-header">
@@ -179,23 +249,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2017/10/13/MySQL事务学习的总结/" itemprop="url">
-                  MySQL学习总结
-                </a>
-              
-            
-          </h1>
+                
+                <a class="post-title-link" href="/2017/10/13/MySQL5-6的benchmark实验报告/" itemprop="url">MySQL5.6的benchmark实验报告</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2017-10-13T09:19:46+08:00" content="2017-10-13">
-              2017-10-13
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-13T11:10:49+08:00">
+                2017-10-13
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -203,12 +277,22 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/10/13/MySQL事务学习的总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/10/13/MySQL事务学习的总结/" itemprop="commentsCount"></span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/13/MySQL5-6的benchmark实验报告/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/10/13/MySQL5-6的benchmark实验报告/" itemprop="commentCount"></span>
                 </a>
               </span>
             
+          
+
+          
+          
+
+          
+
           
 
           
@@ -217,33 +301,193 @@
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
+          
+          
+系统硬件配置
+ CPU: 4核 Intel(R) Xeon(R) CPU E3-1220 V2 @ 3.10GHz
+ 内存：8G
+ 硬盘：1TB
+
+操作系统版本
+ Linux内核版本：3.10.0-327.el7.x86_64
+ Redhat版本： 7.3
+
+MySQL版本
+ MySQL: 5.
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/10/13/MySQL5-6的benchmark实验报告/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nbsbxxx.com/2017/10/13/MySQL事务学习的总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不修电脑的罗师傅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nbsbxxx">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/13/MySQL事务学习的总结/" itemprop="url">MySQL学习总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
             
-            最近对数据库进行了一次重新的学习，对其有了一些新的认识，在此做一个简单的总结。
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-13T09:19:46+08:00">
+                2017-10-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/13/MySQL事务学习的总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/10/13/MySQL事务学习的总结/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          最近对数据库进行了一次重新的学习，对其有了一些新的认识，在此做一个简单的总结。
 数据库区别于文件系统的一个很重要的的点，在于其对事务的支持。
 事务是什么？事务是对数据库数据进行操作的一个基本单位。
 事务有几个特点：ACID.
 其实数据库的很多设计与实现都要为了要达到ACID。所以了解ACID是很关键
-            ...
-          </span>
-          <div class="post-more-link text-center">
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2017/10/13/MySQL事务学习的总结/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -253,6 +497,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -260,9 +508,27 @@
       
 
   
+
+  
+  
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nbsbxxx.com/2016/02/17/语音控制的电灯/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不修电脑的罗师傅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nbsbxxx">
+    </span>
 
     
       <header class="post-header">
@@ -270,23 +536,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2016/02/17/语音控制的电灯/" itemprop="url">
-                  语音控制的电灯
-                </a>
-              
-            
-          </h1>
+                
+                <a class="post-title-link" href="/2016/02/17/语音控制的电灯/" itemprop="url">语音控制的电灯</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-02-17T14:14:23+08:00" content="2016-02-17">
-              2016-02-17
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-17T14:14:23+08:00">
+                2016-02-17
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -294,12 +564,22 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2016/02/17/语音控制的电灯/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/17/语音控制的电灯/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/17/语音控制的电灯/" itemprop="commentCount"></span>
                 </a>
               </span>
             
+          
+
+          
+          
+
+          
+
           
 
           
@@ -308,30 +588,43 @@
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            今天过年的时候在网上流行了一个视频，就是一个自动抢红包的机器人。这个突然一下子就激起了我的兴趣。自己也想尝试做一些硬件方面的东西。
+          
+          今天过年的时候在网上流行了一个视频，就是一个自动抢红包的机器人。这个突然一下子就激起了我的兴趣。自己也想尝试做一些硬件方面的东西。
 在网上搜了一下，发现现在的那些智能硬件，多多少少都与两个东西有关，“Arduino”和“树莓派”。Arduino我的理解就是一个集成化的单片机。树莓派则更像一个非常低配
-            ...
-          </span>
-          <div class="post-more-link text-center">
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2016/02/17/语音控制的电灯/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -341,6 +634,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -348,9 +645,27 @@
       
 
   
+
+  
+  
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nbsbxxx.com/2015/12/09/iPhone中的适配问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不修电脑的罗师傅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nbsbxxx">
+    </span>
 
     
       <header class="post-header">
@@ -358,23 +673,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/12/09/iPhone中的适配问题/" itemprop="url">
-                  iPhone中的适配问题
-                </a>
-              
-            
-          </h1>
+                
+                <a class="post-title-link" href="/2015/12/09/iPhone中的适配问题/" itemprop="url">iPhone中的适配问题</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-09T13:24:45+08:00" content="2015-12-09">
-              2015-12-09
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-09T13:24:45+08:00">
+                2015-12-09
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -382,12 +701,22 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/12/09/iPhone中的适配问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/09/iPhone中的适配问题/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/09/iPhone中的适配问题/" itemprop="commentCount"></span>
                 </a>
               </span>
             
+          
+
+          
+          
+
+          
+
           
 
           
@@ -396,29 +725,42 @@
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            
-            
-          </span>
-          <div class="post-more-link text-center">
+          
+          
+          
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/12/09/iPhone中的适配问题/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -428,6 +770,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -435,9 +781,27 @@
       
 
   
+
+  
+  
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nbsbxxx.com/2015/12/07/UIScrollView与Autolayout/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不修电脑的罗师傅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nbsbxxx">
+    </span>
 
     
       <header class="post-header">
@@ -445,23 +809,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/12/07/UIScrollView与Autolayout/" itemprop="url">
-                  UIScrollView与Autolayout
-                </a>
-              
-            
-          </h1>
+                
+                <a class="post-title-link" href="/2015/12/07/UIScrollView与Autolayout/" itemprop="url">UIScrollView与Autolayout</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-07T10:33:18+08:00" content="2015-12-07">
-              2015-12-07
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-07T10:33:18+08:00">
+                2015-12-07
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -469,12 +837,22 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/12/07/UIScrollView与Autolayout/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/07/UIScrollView与Autolayout/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/07/UIScrollView与Autolayout/" itemprop="commentCount"></span>
                 </a>
               </span>
             
+          
+
+          
+          
+
+          
+
           
 
           
@@ -483,29 +861,42 @@
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            
-            
-          </span>
-          <div class="post-more-link text-center">
+          
+          
+          
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/12/07/UIScrollView与Autolayout/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -515,6 +906,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -522,9 +917,27 @@
       
 
   
+
+  
+  
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nbsbxxx.com/2015/11/13/iOS通知/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不修电脑的罗师傅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nbsbxxx">
+    </span>
 
     
       <header class="post-header">
@@ -532,23 +945,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/11/13/iOS通知/" itemprop="url">
-                  iOS通知
-                </a>
-              
-            
-          </h1>
+                
+                <a class="post-title-link" href="/2015/11/13/iOS通知/" itemprop="url">iOS通知</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-11-13T17:07:10+08:00" content="2015-11-13">
-              2015-11-13
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-11-13T17:07:10+08:00">
+                2015-11-13
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -556,12 +973,22 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/11/13/iOS通知/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/13/iOS通知/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/13/iOS通知/" itemprop="commentCount"></span>
                 </a>
               </span>
             
+          
+
+          
+          
+
+          
+
           
 
           
@@ -570,29 +997,42 @@
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            
-            
-          </span>
-          <div class="post-more-link text-center">
+          
+          
+          
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/11/13/iOS通知/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -602,6 +1042,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -609,9 +1053,27 @@
       
 
   
+
+  
+  
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nbsbxxx.com/2015/10/29/Core-Animation-编程指南/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不修电脑的罗师傅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nbsbxxx">
+    </span>
 
     
       <header class="post-header">
@@ -619,23 +1081,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/10/29/Core-Animation-编程指南/" itemprop="url">
-                  Core Animation 编程指南
-                </a>
-              
-            
-          </h1>
+                
+                <a class="post-title-link" href="/2015/10/29/Core-Animation-编程指南/" itemprop="url">Core Animation 编程指南</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-10-29T14:37:48+08:00" content="2015-10-29">
-              2015-10-29
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-29T14:37:48+08:00">
+                2015-10-29
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -643,12 +1109,22 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/10/29/Core-Animation-编程指南/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/29/Core-Animation-编程指南/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/29/Core-Animation-编程指南/" itemprop="commentCount"></span>
                 </a>
               </span>
             
+          
+
+          
+          
+
+          
+
           
 
           
@@ -657,25 +1133,40 @@
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="description">记录自己对于官方的Core Animation Programming Guide的学习</span>
-          <div class="post-more-link text-center">
+          记录自己对于官方的Core Animation Programming Guide的学习
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/10/29/Core-Animation-编程指南/">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -685,6 +1176,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -692,9 +1187,27 @@
       
 
   
+
+  
+  
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nbsbxxx.com/2015/10/14/ViewController的学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不修电脑的罗师傅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nbsbxxx">
+    </span>
 
     
       <header class="post-header">
@@ -702,23 +1215,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/10/14/ViewController的学习/" itemprop="url">
-                  ViewController的学习
-                </a>
-              
-            
-          </h1>
+                
+                <a class="post-title-link" href="/2015/10/14/ViewController的学习/" itemprop="url">ViewController的学习</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-10-14T22:50:45+08:00" content="2015-10-14">
-              2015-10-14
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-14T22:50:45+08:00">
+                2015-10-14
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -726,12 +1243,22 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/10/14/ViewController的学习/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/14/ViewController的学习/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/14/ViewController的学习/" itemprop="commentCount"></span>
                 </a>
               </span>
             
+          
+
+          
+          
+
+          
+
           
 
           
@@ -740,25 +1267,40 @@
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="description">记录自己对于官方ViewController的学习</span>
-          <div class="post-more-link text-center">
+          记录自己对于官方ViewController的学习
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/10/14/ViewController的学习/">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -768,6 +1310,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -775,9 +1321,27 @@
       
 
   
+
+  
+  
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nbsbxxx.com/2015/10/14/viewDidLoad-viewWillAppear-viewDidAppear的区别？/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不修电脑的罗师傅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nbsbxxx">
+    </span>
 
     
       <header class="post-header">
@@ -785,23 +1349,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/10/14/viewDidLoad-viewWillAppear-viewDidAppear的区别？/" itemprop="url">
-                  viewDidLoad,viewWillAppear,viewDidAppear的区别？
-                </a>
-              
-            
-          </h1>
+                
+                <a class="post-title-link" href="/2015/10/14/viewDidLoad-viewWillAppear-viewDidAppear的区别？/" itemprop="url">viewDidLoad,viewWillAppear,viewDidAppear的区别？</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-10-14T22:20:47+08:00" content="2015-10-14">
-              2015-10-14
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-10-14T22:20:47+08:00">
+                2015-10-14
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -809,12 +1377,22 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/10/14/viewDidLoad-viewWillAppear-viewDidAppear的区别？/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/14/viewDidLoad-viewWillAppear-viewDidAppear的区别？/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/14/viewDidLoad-viewWillAppear-viewDidAppear的区别？/" itemprop="commentCount"></span>
                 </a>
               </span>
             
+          
+
+          
+          
+
+          
+
           
 
           
@@ -823,29 +1401,42 @@
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            
-            
-          </span>
-          <div class="post-more-link text-center">
+          
+          
+          
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/10/14/viewDidLoad-viewWillAppear-viewDidAppear的区别？/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -855,6 +1446,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -862,9 +1457,27 @@
       
 
   
+
+  
+  
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nbsbxxx.com/2015/09/30/session是什么/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="不修电脑的罗师傅">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nbsbxxx">
+    </span>
 
     
       <header class="post-header">
@@ -872,23 +1485,27 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                <a class="post-title-link" href="/2015/09/30/session是什么/" itemprop="url">
-                  session是什么
-                </a>
-              
-            
-          </h1>
+                
+                <a class="post-title-link" href="/2015/09/30/session是什么/" itemprop="url">session是什么</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-09-30T22:50:45+08:00" content="2015-09-30">
-              2015-09-30
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-30T22:50:45+08:00">
+                2015-09-30
+              </time>
+            
+
+            
+
+            
           </span>
 
           
@@ -896,12 +1513,22 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/09/30/session是什么/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/30/session是什么/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/09/30/session是什么/" itemprop="commentCount"></span>
                 </a>
               </span>
             
+          
+
+          
+          
+
+          
+
           
 
           
@@ -910,30 +1537,43 @@
       </header>
     
 
-
-    <div class="post-body">
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            
+          
+          
 In computer science, in particular networking, a session is a semi-permanent interactive information interchange, also known as a dialogue, a convers
-            ...
-          </span>
-          <div class="post-more-link text-center">
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/09/30/session是什么/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -943,6 +1583,10 @@ In computer science, in particular networking, a session is a semi-permanent int
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -951,15 +1595,16 @@ In computer science, in particular networking, a session is a semi-permanent int
 
   
 
- </div>
 
-        
+          </div>
+          
 
-        
-      </div>
 
-      
+          
+
+        </div>
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -970,70 +1615,76 @@ In computer science, in particular networking, a session is a semi-permanent int
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/avatar.jpg" alt="不修电脑的罗师傅" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">不修电脑的罗师傅</p>
-        </div>
-        <p class="site-description motion-element" itemprop="description">我不怕千万人阻挡，只怕自己投降。</p>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">9</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">分类</span>
-              </a>
-          </div>
-
-          <div class="site-state-item site-state-tags">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">标签</span>
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="不修电脑的罗师傅" />
+            
+              <p class="site-author-name" itemprop="name">不修电脑的罗师傅</p>
+              <p class="site-description motion-element" itemprop="description">我不怕千万人阻挡，只怕自己投降。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
               
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/luomuwen" target="_blank" title="github">
+                    
+                      <i class="fa fa-fw fa-globe"></i>github</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/goo8080" target="_blank" title="weibo">
+                    
+                      <i class="fa fa-fw fa-globe"></i>weibo</a>
+                </span>
+              
+            
           </div>
 
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
           
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/luomuwen" target="_blank">
-                  <i class="fa fa-github"></i> github
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/goo8080" target="_blank">
-                  <i class="fa fa-weibo"></i> weibo
-                </a>
-              </span>
-            
           
+
+          
+          
+
+          
+
         </div>
-
-        
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
       </section>
+
+      
 
       
 
@@ -1041,44 +1692,131 @@ In computer science, in particular networking, a session is a semi-permanent int
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner"> <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">不修电脑的罗师傅</span>
-</div>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
+  
 </div>
 
 
- </div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
 
   
   
+
   
-    
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
 
   
     
@@ -1096,61 +1834,46 @@ In computer science, in particular networking, a session is a semi-permanent int
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
+
+  
     
-     
-
-
     
-  
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.2" id="motion.global"></script>
 
 
 
 
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
-  
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-      if (isMobile()) {
-        FastClick.attach(document.body);
-      }
 
-      motionIntegrator.bootstrap();
-    });
-  </script>
+
+
+
+
+
+
+
 
   
+
+
+
+
+
   
 
   
+
   
 
   
-  <script type="text/javascript" src="/js/lazyload.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
-        effect: "fadeIn"
-      });
-    });
-  </script>
+
+  
+
+  
+
 </body>
 </html>
